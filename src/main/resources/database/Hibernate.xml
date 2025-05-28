@@ -25,7 +25,7 @@
         </property>
         <property name="packagesToScan">
             <list>
-                <value>com.demo.mvc_prac.entity</value>
+                <value>com.demo.mvc_prac.model.entity</value>
             </list>
         </property>
 

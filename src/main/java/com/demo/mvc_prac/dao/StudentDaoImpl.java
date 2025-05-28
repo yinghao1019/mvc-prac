@@ -10,7 +10,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-@Repository
 @RequiredArgsConstructor
 public class StudentDaoImpl implements StudentDao {
     private final SessionFactory sessionFactory;
@@ -18,26 +17,24 @@ public class StudentDaoImpl implements StudentDao {
     @Override
     @Transactional
     public StudentEntity findById(long id) {
-        String sql = "select * from Student where id = :id";
+        String hql = "from StudentEntity where id = :id";
         Query<StudentEntity> query =
                 sessionFactory
                         .getCurrentSession()
-                        .createSQLQuery(sql)
-                        .addEntity(StudentEntity.class);
+                        .createQuery(hql, StudentEntity.class);
         query.setParameter("id", id);
-        return query.getSingleResult();
+        return query.uniqueResult();
     }
 
     @Override
     @Transactional
     public List<StudentEntity> findAll() {
-        String sql = "select * from Student";
+        String hql = "from StudentEntity";
         Query<StudentEntity> query =
                 sessionFactory
                         .getCurrentSession()
-                        .createSQLQuery(sql)
-                        .addEntity(StudentEntity.class);
-        return query.getResultList();
+                        .createQuery(hql, StudentEntity.class);
+        return query.list();
     }
 
     @Override
