@@ -10,6 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
+@Repository
 @RequiredArgsConstructor
 public class StudentDaoImpl implements StudentDao {
     private final SessionFactory sessionFactory;

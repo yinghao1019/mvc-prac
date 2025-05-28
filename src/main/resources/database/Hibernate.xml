@@ -41,5 +41,4 @@
         <property name="sessionFactory" ref="sessionFactory"/>
     </bean>
     <tx:annotation-driven transaction-manager="transactionManager"/>
-    <jdbc:embedded-database id="dataSource"/>
 </beans>

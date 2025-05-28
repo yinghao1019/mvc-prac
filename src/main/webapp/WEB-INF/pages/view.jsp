@@ -6,8 +6,8 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <script src="<c:url value='/js/jquery-3.3.1.min.js' />"></script>
     <title>View Detail</title>
+    <script src="<c:url value='/js/jquery-3.3.1.min.js' />"></script>
 </head>
 <body>
 <h1>詳細資料</h1>
