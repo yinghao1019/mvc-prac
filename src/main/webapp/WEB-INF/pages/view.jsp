@@ -49,9 +49,6 @@
 </c:choose>
 </body>
 <script type="text/javascript">
-    $(document).ready(function() {
-
-    })
     function modifyDetail(id,type){
         $('input[name="id"]').val(id);
         $('input[name="type"]').val(type);

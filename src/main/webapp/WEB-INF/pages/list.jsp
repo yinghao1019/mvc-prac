@@ -22,6 +22,7 @@
             </tr>
             <c:forEach items="${resultList}" var="result" varStatus="s">
                 <tr>
+
                     <td>${result.id}</td>
                     <td>${result.name}</td>
                     <td><input type="button" value="查看"
